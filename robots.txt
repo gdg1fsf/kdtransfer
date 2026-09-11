@@ -1,0 +1,31 @@
+# KD Transfer - robots.txt
+
+# Разрешить всем поисковым ботам индексировать сайт
+User-agent: *
+Allow: /
+
+# Запретить индексацию служебных файлов
+Disallow: /send-order.php
+Disallow: /orders.log
+Disallow: /*.md$
+Disallow: /*.json$
+
+# Указание на карту сайта
+# ВАЖНО: Замените на ваш реальный домен!
+Sitemap: https://kdtransfer.ru/sitemap.xml
+
+# Настройки для Яндекса
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign
+
+# Настройки для Google
+User-agent: Googlebot
+Allow: /
+
+# Запретить скачивание изображений (опционально)
+# User-agent: Googlebot-Image
+# Disallow: /images/
+
+# Ускорить индексацию для Google
+Crawl-delay: 0

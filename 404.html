@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Страница не найдена | KD Transfer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.03) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.02) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .error-content {
+      text-align: center;
+      max-width: 600px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--white) 0%, var(--gray-500) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.05em;
+      animation: glitch 3s infinite;
+    }
+
+    @keyframes glitch {
+      0%, 100% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+    }
+
+    .error-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    .error-description {
+      font-size: 1.1rem;
+      color: var(--gray-400);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .error-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-car {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: carMove 2s ease-in-out infinite;
+    }
+
+    @keyframes carMove {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+
+    @media (max-width: 640px) {
+      .error-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <div class="error-content">
+      <div class="error-car">🚗💨</div>
+      <div class="error-code">404</div>
+      <h1 class="error-title">Страница не найдена</h1>
+      <p class="error-description">
+        Похоже, вы свернули не туда! Эта страница не существует или была перемещена.
+        Но не волнуйтесь — мы поможем вам вернуться на правильный маршрут.
+      </p>
+      <div class="error-buttons">
+        <a href="/" class="btn-primary">
+          🏠 На главную
+        </a>
+        <a href="https://t.me/kdtransfer" target="_blank" class="btn-secondary">
+          💬 Написать в Telegram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Анимация появления
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.error-content').style.animation = 'fadeInUp 0.8s ease';
+    });
+
+    // Добавляем keyframes для анимации
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

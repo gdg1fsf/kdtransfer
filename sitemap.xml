@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Главная страница -->
+  <url>
+    <loc>https://kdtransfer.ru/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Изображения на главной -->
+    <image:image>
+      <image:loc>https://kdtransfer.ru/images/logo.png</image:loc>
+      <image:title>KD Transfer Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kdtransfer.ru/images/telegram-profile.png</image:loc>
+      <image:title>KD Transfer Telegram</image:title>
+    </image:image>
+  </url>
+
+  <!-- Секция Маршруты -->
+  <url>
+    <loc>https://kdtransfer.ru/#routes</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Секция Форма заказа -->
+  <url>
+    <loc>https://kdtransfer.ru/#booking</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Секция Преимущества -->
+  <url>
+    <loc>https://kdtransfer.ru/#advantages</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Секция Отзывы -->
+  <url>
+    <loc>https://kdtransfer.ru/#reviews</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Секция Контакты -->
+  <url>
+    <loc>https://kdtransfer.ru/#contact</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Страница 404 (опционально) -->
+  <url>
+    <loc>https://kdtransfer.ru/404.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+</urlset>
