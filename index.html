@@ -17,8 +17,43 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>KD <span></span>Transfer</span></h1>
-                <p class="tagline">Премиум трансфер</p>
+                <svg class="logo-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#cccccc;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Внешнее кольцо -->
+                    <circle cx="30" cy="30" r="28" fill="none" stroke="url(#logoGradient)" stroke-width="1.5" opacity="0.6"/>
+                    
+                    <!-- Буквы KD стилизованные -->
+                    <g transform="translate(12, 18)">
+                        <!-- K -->
+                        <path d="M 0 0 L 0 14 M 0 7 L 6 0 M 0 7 L 6 14" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <!-- D -->
+                        <path d="M 10 0 L 10 14 M 10 0 C 16 0, 18 3, 18 7 C 18 11, 16 14, 10 14" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </g>
+                    
+                    <!-- Силуэт машины внизу -->
+                    <g transform="translate(15, 38)">
+                        <!-- Упрощенный профиль SUV -->
+                        <path d="M 2 6 L 5 2 L 12 2 L 18 2 L 23 2 L 28 6 L 28 8 L 2 8 Z" fill="#ffffff" opacity="0.8"/>
+                        <!-- Колеса -->
+                        <circle cx="7" cy="9" r="2" fill="#ffffff"/>
+                        <circle cx="7" cy="9" r="1" fill="#0a0a0a"/>
+                        <circle cx="23" cy="9" r="2" fill="#ffffff"/>
+                        <circle cx="23" cy="9" r="1" fill="#0a0a0a"/>
+                        <!-- Окна -->
+                        <rect x="7" y="3" width="4" height="3" fill="#0a0a0a" opacity="0.6"/>
+                        <rect x="15" y="3" width="6" height="3" fill="#0a0a0a" opacity="0.6"/>
+                    </g>
+                </svg>
+                <div class="logo-text">
+                    <h1>KD <span>Transfer</span></h1>
+                    <p class="tagline">Премиум трансфер</p>
+                </div>
             </div>
             <nav class="nav">
                 <a href="#about">О нас</a>
@@ -116,8 +151,9 @@
             </div>
             <div class="fleet-showcase">
                 <div class="fleet-image">
-                    <div class="car-placeholder">
-                        <span>Mazda CX-7</span>
+                    <div class="globe-container">
+                        <canvas id="globe"></canvas>
+                        <div class="globe-label">Mazda CX-7</div>
                     </div>
                 </div>
                 <div class="fleet-info">
@@ -196,8 +232,10 @@
                     <p class="form-note">* Обязательные поля</p>
                 </form>
                 <div id="successMessage" class="success-message" style="display: none;">
-                    <h3>✓ Заявка отправлена!</h3>
-                    <p>Мы свяжемся с вами в ближайшее время</p>
+                    <div class="success-icon">✓</div>
+                    <h3>Ожидайте!</h3>
+                    <p>Скоро с вами свяжется водитель Евгений!</p>
+                    <p class="success-note">Мы получили вашу заявку и свяжемся с вами в ближайшее время</p>
                 </div>
             </div>
         </div>
@@ -233,4 +271,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
